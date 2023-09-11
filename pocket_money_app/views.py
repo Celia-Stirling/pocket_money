@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the pocket_money index.")
+  template = loader.get_template('pocket_money.html')
+  return HttpResponse(template.render())
