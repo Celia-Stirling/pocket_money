@@ -10,4 +10,10 @@
     <h1>Hello World!</h1>
     <p>Pocket Money View - Select Child</p>
 
+    <ul>
+        {% for x in children %}
+          <li>{{ x.firstname }} {{ x.lastname }}</li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
