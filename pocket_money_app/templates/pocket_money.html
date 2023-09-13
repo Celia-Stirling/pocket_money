@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %} 
 
 {% block title %}
     Pocket Money - Select Child
@@ -7,13 +8,12 @@
     
 {% block content %}
 
-    <h1>Hello World!</h1>
-    <p>Pocket Money View - Select Child</p>
+    <h1>Pocket Money - Select a Child</h1>
+    <p>Hello, select a child to get started</p>
 
-    <ul>
-        {% for x in children %}
-          <li>{{ x.firstname }} {{ x.lastname }}</li>
-        {% endfor %}
-    </ul>
+    {% for x in children %}
+        <h2>{{ x.firstname }} {{ x.lastname }}</h2>
+        <img src="{% static x.firstname %}.jpeg" alt="photo of {{ x.firstname }}" width="500" height="auto">
+    {% endfor %}
 
 {% endblock %}
