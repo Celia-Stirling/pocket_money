@@ -12,3 +12,11 @@ def index(request):
     'children': children,
   }
   return HttpResponse(template.render(context, request))
+
+def details(request, id):
+  child = Child.objects.get(id=id)
+  template = loader.get_template('details.html')
+  context = {
+    'child': child,
+  }
+  return HttpResponse(template.render(context, request))

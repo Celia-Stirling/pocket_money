@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %}
+    Pocket Money - {{ child.firstname }} {{ child.lastname }}
+{% endblock %}
+    
+    
+{% block content %}
+
+    <h1>Pocket Money - {{ child.firstname }} {{ child.lastname }}</h1>
+    <p>Hello this is the details view - to display balance and tasks</p>
+
+{% endblock %}

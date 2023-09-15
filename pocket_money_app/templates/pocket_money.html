@@ -12,8 +12,12 @@
     <p>Hello, select a child to get started</p>
 
     {% for x in children %}
-        <h2>{{ x.firstname }} {{ x.lastname }}</h2>
-        <img src="{% static x.firstname %}.jpeg" alt="photo of {{ x.firstname }}" width="500" height="auto">
+        <div>
+            <a href="details/{{ x.id }}">
+                <h2>{{ x.firstname }} {{ x.lastname }}</h2>
+                <img src="{% static x.firstname %}.jpeg" alt="photo of {{ x.firstname }}" width="500" height="auto">
+            </a>
+        </div>
     {% endfor %}
 
 {% endblock %}
