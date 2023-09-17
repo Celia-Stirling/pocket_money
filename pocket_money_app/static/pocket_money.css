@@ -4,3 +4,33 @@ body {
     text-align: center;
   }
 
+.grid-container-pm {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-child {
+  padding-bottom: 20px;
+  height: 400px;
+}
+
+.grid-container-details {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.piggy_bank {
+  background-image: url("piggy_bank.jpg");
+  border: solid;
+}
+
+.coins {
+  background-color: aquamarine;
+  border: solid;
+}
+
+.tasks {
+  background-color:blueviolet;
+  border: solid;
+}

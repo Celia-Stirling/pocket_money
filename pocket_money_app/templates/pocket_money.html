@@ -9,15 +9,18 @@
 {% block content %}
 
     <h1>Pocket Money - Select a Child</h1>
-    <p>Hello, select a child to get started</p>
+
+<div class="grid-container-pm">
 
     {% for x in children %}
-        <div>
+        <div class="grid-child">
             <a href="details/{{ x.id }}">
                 <h2>{{ x.firstname }} {{ x.lastname }}</h2>
-                <img src="{% static x.firstname %}.jpeg" alt="photo of {{ x.firstname }}" width="500" height="auto">
+                <img src="{% static x.firstname %}.jpg" alt="photo of {{ x.firstname }}">
             </a>
         </div>
     {% endfor %}
+
+</div>
 
 {% endblock %}

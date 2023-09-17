@@ -8,7 +8,12 @@
     
 {% block content %}
 
-    <h1>Pocket Money - {{ child.firstname }} {{ child.lastname }}</h1>
+    <h1>{{ child.firstname }} {{ child.lastname }}</h1>
     <p>Hello this is the details view - to display balance and tasks</p>
+    <div class="grid-container-details">
+        <div class="grid-child piggy_bank"></div>
+        <div class="grid-child coins"></div>
+        <div class="grid-child tasks"></div>
+    </div>
 
 {% endblock %}
