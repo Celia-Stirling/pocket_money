@@ -11,9 +11,28 @@
     <h1>{{ child.firstname }} {{ child.lastname }}</h1>
     <p>Hello this is the details view - to display balance and tasks</p>
     <div class="grid-container-details">
-        <div class="grid-child piggy_bank"></div>
-        <div class="grid-child coins"></div>
-        <div class="grid-child tasks"></div>
+        <div class="grid-child piggy_bank">
+            <h2>Balance:</h2>
+            <p>£4.00</p>
+        </div>
+        <div class="grid-child coins">
+            <div class="row">
+                <img src="{% static 'one_pence.png' %}" alt="one pence coin">
+                <img src="{% static 'two_pence.png' %}" alt="two pence coin">
+            </div>
+            <div class="row">
+                <img src="{% static 'five_pence.png' %}" alt="five pence coin">
+                <img src="{% static 'ten_pence.png' %}" alt="ten pence coin">
+            </div>
+            <div class="row">
+                <img src="{% static 'twenty_pence.png' %}" alt="twenty pence coin">
+                <img src="{% static 'fifty_pence.png' %}" alt="fifty pence coin">
+                <img src="{% static 'pound_coin.png' %}" alt="pound coin">
+            </div>
+        </div>
+        <div class="grid-child tasks">
+            <img src="{% static 'notepad.png' %}" alt="notepad">
+        </div>
     </div>
 
 {% endblock %}
